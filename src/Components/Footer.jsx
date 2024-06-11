@@ -12,7 +12,7 @@ const Footer = () => {
             </div>
             <div className="footer-section">
                 <h3>Headquarters</h3>
-                <p>Sonagachi St.</p>
+                <p>Chowringhee St.</p>
                 <p>Kolkata:700021</p>
             </div>
             <div className="footer-section">
