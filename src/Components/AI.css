@@ -1,149 +1,114 @@
-/* Base styles */
+/* General styles */
 body {
-    font-family: 'Roboto', sans-serif;
-    background-image: url("https://images.unsplash.com/photo-1619252584172-a83a949b6efd?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-    margin: 0;
-    margin-top: 5.6rem;
-    padding: 0;
-    color: #333;
-  }
-  
-  .ai-applications {
-    padding: 2em 10%;
-    background-color: #ffffff;
-    color: #333;
-    max-width: 1200px;
-    margin: 0 auto;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-  }
-  
-  .ai-title {
-    text-align: center;
-    color: #007BFF;
-    margin-bottom: 1em;
-    margin-top: 0rem;
-    font-size: 2.5em;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-    font-family: system-ui;
-  }
-  
+  font-family: Arial, sans-serif;
+  margin: 0;
+  margin-top: 7rem;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+/* Title */
+.ai-title {
+  font-size: 2.5em;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #0044cc;
+}
+
+/* Section styling */
+.ai-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-bottom: 40px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.ai-section:nth-child(even) .ai-section-content {
+  order: 1;
+}
+
+/* Content and image styling */
+.ai-section-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.ai-section-image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.ai-section-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Responsive text */
+h2 {
+  font-size: 1.8em;
+  color: #0055ff;
+  margin: 10px 0;
+}
+
+p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #666;
+  margin: 10px 0;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
   .ai-section {
-    display: flex;
     flex-direction: row;
-    align-items: center;
-    margin-bottom: 3em;
-    background: #f0f8ff;
-    padding: 1.5em;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
   }
   
-  .ai-section:nth-child(even) {
-    flex-direction: row-reverse;
-    background: #e6f7ff;
+  .ai-section-content, .ai-section-image {
+    flex: 1;
+    padding: 40px;
   }
   
   .ai-section-content {
-    flex: 1;
-    padding: 1em;
-    font-family: system-ui;
+    text-align: left;
   }
-  
-  .ai-section h2 {
-    color: #0056b3;
-    margin-bottom: 0.5em;
+
+  .ai-title {
+    font-size: 3em;
+  }
+
+  h2 {
     font-size: 2em;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
   }
-  
-  .ai-section p {
-    font-size: 1.2em;
-    line-height: 1.6;
-    margin-top: 1em;
-    text-align: justify;
+
+  p {
+    font-size: 1.4em;
   }
-  
-  .ai-section-image {
-    flex: 1;
-    padding: 1em;
+}
+
+@media (min-width: 1200px) {
+  .ai-section-content, .ai-section-image {
+    padding: 60px;
   }
-  
-  .ai-section-image img {
-    width: 100%;
-    height: auto;
-    max-height: 300px;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+  .ai-title {
+    font-size: 3.5em;
   }
-  
-  /* Responsive styles */
-  @media (max-width: 1024px) {
-    .ai-title {
-      font-size: 2.2em;
-    }
-  
-    .ai-section {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .ai-section-content, .ai-section-image {
-      padding: 0;
-      width: 100%;
-    }
-  
-    .ai-section h2 {
-      font-size: 1.8em;
-    }
-  
-    .ai-section p {
-      font-size: 1.1em;
-    }
-  
-    .ai-section-image img {
-      max-height: 250px;
-    }
+
+  h2 {
+    font-size: 2.5em;
   }
-  
-  @media (max-width: 768px) {
-    .ai-applications {
-      padding: 2em 5%;
-    }
-  
-    .ai-title {
-      font-size: 2em;
-    }
-  
-    .ai-section h2 {
-      font-size: 1.6em;
-    }
-  
-    .ai-section p {
-      font-size: 1em;
-    }
-  
-    .ai-section-image img {
-      max-height: 200px;
-    }
+
+  p {
+    font-size: 1.6em;
   }
-  
-  @media (max-width: 480px) {
-    .ai-title {
-      font-size: 1.8em;
-    }
-  
-    .ai-section h2 {
-      font-size: 1.4em;
-    }
-  
-    .ai-section p {
-      font-size: 0.9em;
-    }
-  
-    .ai-section-image img {
-      max-height: 150px;
-    }
-  }
-  
+}
